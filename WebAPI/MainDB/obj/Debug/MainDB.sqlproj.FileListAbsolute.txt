@@ -1,0 +1,5 @@
+C:\Data\Presentation\WorkShop_KnockoutJS\Source\MainDB\bin\Debug\MainDB.dacpac
+C:\Data\Presentation\WorkShop_KnockoutJS\Source\MainDB\bin\Debug\MainDB.dll
+C:\Data\Presentation\WorkShop_KnockoutJS\Source\MainDB\bin\Debug\MainDB.pdb
+C:\Data\Presentation\WorkShop_KnockoutJS\Source\MainDB\obj\Debug\MainDB.dll
+C:\Data\Presentation\WorkShop_KnockoutJS\Source\MainDB\obj\Debug\MainDB.pdb

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "module": "amd",
+    "target": "es5"
+  },
+  "include": [
+    "./Scripts/**/*",
+    "./Scripts/typings/index.d.ts"
+  ],
+  "compileOnSave": true
+}

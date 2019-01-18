@@ -1,0 +1,8 @@
+C:\Data\Presentation\WorkShop_KnockoutJS\Source\DataPlayer\bin\Debug\DataPlayer.dll
+C:\Data\Presentation\WorkShop_KnockoutJS\Source\DataPlayer\bin\Debug\DataPlayer.pdb
+C:\Data\Presentation\WorkShop_KnockoutJS\Source\DataPlayer\bin\Debug\Dapper.dll
+C:\Data\Presentation\WorkShop_KnockoutJS\Source\DataPlayer\bin\Debug\Dapper.xml
+C:\Data\Presentation\WorkShop_KnockoutJS\Source\DataPlayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+C:\Data\Presentation\WorkShop_KnockoutJS\Source\DataPlayer\obj\Debug\DataPlayer.dll
+C:\Data\Presentation\WorkShop_KnockoutJS\Source\DataPlayer\obj\Debug\DataPlayer.pdb
+C:\Data\Presentation\WorkShop_KnockoutJS\Source\DataPlayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache

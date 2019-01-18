@@ -1,0 +1,84 @@
+﻿
+
+
+
+
+<button type="button" id="showLogin" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">See Modal</button>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            @*<div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+
+        </div>*@
+            <div class="modal-body" style="height:260px">
+
+                <h3>Login</h3>
+                You don't have the permission. Please log in or register an account.
+                @if(Request.IsAuthenticated)
+                {
+                    using(Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                @Html.ActionLink("Hello " + User.Identity.Name + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                            </li>
+                            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                        </ul>
+                    }
+                }
+                @using(Html.BeginForm("Login", "Employee"))
+                {
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="UserName">User Name</label>
+                        <div class="col-md-6">
+                            <input class="form-control text-box single-line" id="UserName" name="UserName" type="text" value="" data-bind="value: UserName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4" for="Password">Password</label>
+                        <div class="col-md-6">
+                            <input class="form-control text-box single-line" id="Password" name="Password" type="password" value="" data-bind="value: Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>@Html.ActionLink("Register", "Register", "Employee")</li>
+                                <li>@Html.ActionLink("Log in with Account Domain Id " + HttpContext.Current.Request.LogonUserIdentity.Name, "LoginByWindow", "Employee")</li>
+                            </ul>
+                            <input type="submit" data-bind="click: createEmployee" value="Login" class="btn btn-default">
+                        </div>
+                    </div>
+
+                }
+
+
+
+                
+                </div>
+            @*<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+    </div> *@
+            </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    @Scripts.Render("~/bundles/jquery")
+
+    <script type="text/javascript">
+        
+
+        $(function () {
+            $("#showLogin").click();
+
+        });
+    </script>
+}

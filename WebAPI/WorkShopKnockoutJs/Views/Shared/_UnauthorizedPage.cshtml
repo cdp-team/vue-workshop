@@ -1,0 +1,63 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <title>Unauthorized !</title>
+    <script src="~/Scripts/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/layoutv1/error/unauthorized.css">
+</head>
+<body>
+    <div id="gover" class="">
+        <div class="diag-area" style="left:-25%;">
+        </div>
+    </div>
+    <div class="left-content">
+        <div class="content">
+            <div class="logo" style="text-align:center;float:left;margin-top:-30px;margin-left:-5%;">
+                <img src="~/Content/img/Logo_DMP_trans_white.png" style="width: 200px;" />
+            </div>
+            <div style="float:left;">
+                <div class="unauthorized-title" data-unsp-sanitized="clean">
+                    Unauthorized !
+                </div>
+                <div class="unauthorized-message" data-unsp-sanitized="clean">
+                    You are not authorized to access this page.
+                </div>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="~/Content/img/bollore-logo-white.png" style="width: 250px;" />
+        </div>
+    </div>
+    <div class="right-content" style="opacity:0;">
+        <div class="content">
+            <div class="" data-unsp-sanitized="clean">
+                <div class="button-title" data-unsp-sanitized="clean">
+                    Back to home
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        var $diag = $("#gover > .diag-area");
+        $diag.on("webkitAnimationEnd oanimationend msAnimationEnd animationend", function (e) {
+            $diag.addClass("skewed");
+        });
+        $("#gover").find("div").addClass("overlay");
+        $("#gover").addClass("global-overlay");
+        $(".right-content").first().addClass("button-back");
+        $(".right-content .content").on("click", function (e) {
+            window.location.href = "/Home/Index/";
+        });
+    });
+</script>
